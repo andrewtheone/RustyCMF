@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Rusty CMS</title>
+<script type="text/javascript" src="/assets/js/react.js"></script>
+<script type="text/javascript" src="/assets/js/require.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+<body>
+	<?=$this->getContent();?>
+
+	<script>
+		window.pageVars = <?=json_encode($pageVars);?>;
+	</script>
+</body>
+</html>
