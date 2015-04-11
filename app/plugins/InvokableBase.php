@@ -1,7 +1,6 @@
 <?php
 
-class PluginBase {
-
+class InvokableBase {
 	protected $__di;
 
 	public function __construct($di) {
@@ -10,10 +9,5 @@ class PluginBase {
 
 	public function getDI() {
 		return $this->__di;
-	}
-
-	public function __call($name, $args) {
-		$n = get_class($this);
-		return $n."::".$name." is not implemented!";
 	}
 }

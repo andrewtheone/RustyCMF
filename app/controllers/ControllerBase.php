@@ -27,7 +27,7 @@ class ControllerBase extends \Phalcon\Mvc\Controller{
 
         	$args = implode(", ", $args);
 
-        	$code = "(new ".$expr[0]['expr']['value']."Plugin(\$GLOBALS['di']))->".$expr[1]['expr']['value']."(".$args.")";
+        	$code = "(new ".$expr[0]['expr']['value']."(\$GLOBALS['di']))->".$expr[1]['expr']['value']."(".$args.")";
         	return $code;
         	//return "\"PHP Plugin <b>".print_r(."</b> called!\";";
         });
