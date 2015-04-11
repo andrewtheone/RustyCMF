@@ -6,9 +6,19 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-    	$this->renderTemplate("hello_world", [
+    	/*$this->renderTemplate("hello_world", [
     		'name' => 'Daniel'
-    	]);
+    	]);*/
+		
+		$data = [
+			'name' => 'phpName'
+		];
+
+		$vars = [
+			'name' => 'reactName'
+		];
+
+		$this->view->show('hello_world', $data, $vars);
     }
 }
 

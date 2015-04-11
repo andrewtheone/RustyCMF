@@ -1,0 +1,6 @@
+Hi, <?php echo $data['name']; ?>!<br>
+<?php echo '<React name=\'ContactForm\'></React>'; ?><br>
+<?php echo (new Test\Invokable\TInv($GLOBALS['di']))->sayHello(); ?><br>
+<?php echo (new Test\Invokable\TInv($GLOBALS['di']))->sayHello('Daniel'); ?><br>
+<?php echo (new Test\Invokable\TInv($GLOBALS['di']))->sayHello('Daniel', 'Thomas'); ?><br>
+<?php echo (new Test\Invokable\TInv($GLOBALS['di']))->sayHello('This one is from variable', $data['name']); ?><br>

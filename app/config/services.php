@@ -22,10 +22,15 @@ $di->set('url', function() use ($config) {
  * Setting up the view component
  */
 $di->set('view', function() use ($config) {
-	$view = new \Phalcon\Mvc\View();
+	$view = new Rusty\ViewManager();
 	$view->setViewsDir($config->application->viewsDir);
 	return $view;
 });
+
+/*$di->set('', function() use ($config, $di) {
+    $view = new Rusty\ViewManager($di);
+    return $view;
+});*/
 
 /**
  * Database connection is created based in the parameters defined in the configuration file
