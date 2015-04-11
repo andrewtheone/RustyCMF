@@ -1,4 +1,5 @@
 <?php
+$start_time = microtime(TRUE);
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -25,7 +26,9 @@ try {
 	$application = new \Phalcon\Mvc\Application();
 	$application->setDI($di);
 	echo $application->handle()->getContent();
+	$end_time = microtime(TRUE);
 
+	header("Rusty-Benchmark: ".($end_time - $start_time));
 } catch (Phalcon\Exception $e) {
 	echo $e->getMessage();
 } catch (PDOException $e){
